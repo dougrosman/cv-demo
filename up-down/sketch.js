@@ -80,9 +80,11 @@ function gotResult(error, results) {
 
   label = results[0].label;
 
+  
+
   // if up, then move ball up, else if down, move ball down. else (neutral), ball stays in place
 
-  const speed = 4;
+  const speed = 1;
   if (label == "up" && position.y > 0) {
     //position.y = position.y - 1;
     position.y -= speed;
@@ -94,6 +96,7 @@ function gotResult(error, results) {
     totalMovement++;
   } else {
     fillColor = color(0, 255, 0);
+    // defaultCanvas0.style.filter = "blur(5px)"
   }
 
   console.log(totalMovement);
